@@ -2,7 +2,7 @@ import React, { useState }from 'react';
 import './App.css';
 import Card from './Card';
 
-function App() {
+export default function App() {
   return (
     <div>
       Dice game
@@ -10,5 +10,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
