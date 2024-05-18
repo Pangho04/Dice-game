@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/Dice-game/static/css/main.51dda203.css",
+    "main.js": "/Dice-game/static/js/main.68ec7cfe.js",
+    "static/media/logo.png": "/Dice-game/static/media/logo.536e31881b2f6fe44113.png",
+    "static/media/dice-yellow06.png": "/Dice-game/static/media/dice-yellow06.3fff8d8c33d7e02bea21.png",
+    "static/media/dice-yellow05.png": "/Dice-game/static/media/dice-yellow05.bd14c002419ca3616ce7.png",
+    "static/media/dice-yellow04.png": "/Dice-game/static/media/dice-yellow04.a99f473686ea03a1d36d.png",
+    "static/media/dice-yellow03.png": "/Dice-game/static/media/dice-yellow03.a7a9853d5ed2a4deefd7.png",
+    "static/media/dice-yellow02.png": "/Dice-game/static/media/dice-yellow02.2cc51e6088f7b1f2f048.png",
+    "static/media/dice-red06.png": "/Dice-game/static/media/dice-red06.1ec89218e210256e8ac3.png",
+    "static/media/dice-yellow01.png": "/Dice-game/static/media/dice-yellow01.cea7177a2aa27543d2ba.png",
+    "index.html": "/Dice-game/index.html",
+    "main.51dda203.css.map": "/Dice-game/static/css/main.51dda203.css.map",
+    "main.68ec7cfe.js.map": "/Dice-game/static/js/main.68ec7cfe.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.51dda203.css",
+    "static/js/main.68ec7cfe.js"
+  ]
+}
