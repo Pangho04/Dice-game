@@ -1,7 +1,8 @@
-import React, { useState, useEffect }from 'react';
+import React, { useState, useEffect} from 'react';
 import './App.css';
 import Card from './Card';
 import Menu from './Menu';
+import userEvent from '@testing-library/user-event';
 
 export default function App() {
   const [dice, setDice] = useState(null);
@@ -14,8 +15,10 @@ export default function App() {
   let player1Dice;
   let player2Dice;
   let dice1Img = `yellow0${player1TurnScores.slice(player1TurnScores.length - 1)}`;
-  let dice2Img = `red0${player2TurnScores.slice(player2TurnScores.length - 1)}`;;
+  let dice2Img = `red0${player2TurnScores.slice(player2TurnScores.length - 1)}`;
 
+
+  /**왜 미리 rollDice를 한번 실행 시켜줘야 되는지 모르겠음 */
   useEffect(() => {
     rollDice();
   },[]);
