@@ -31,6 +31,7 @@ h3 {
 .menus {
   display: flex;
   justify-content: space-evenly;
+  font-size: 2rem;
   width: 30%;
   margin: 0 0 2%;
 }
@@ -84,14 +85,26 @@ h3 {
   border-width: 6px;
 }
 
+h4 {
+  font-size: 2rem;
+}
+
 .dices {
   width: 50%;
   height: 50%;
   border-radius: 10px;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.642);
+  transition: opacity 0.3s ease-in-out;
+  opacity: 1;
+}
+
+.dices.animate {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .card > p {
+  font-size: 1.5rem;
   min-height: 22px;
 }
 
@@ -104,7 +117,7 @@ h3 {
   width: 70%;
   font-size: 130%;
   }
-  
+
   .logo {
     width: 20%;
   }
@@ -120,7 +133,15 @@ h3 {
   .dices {
     width: 40%;
     margin-bottom: 10%;
+    transition: opacity 2s ease-in-out;
+    opacity: 1;
   }
+
+  .dices.animate {
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+  }
+
 
   p {
     margin: 5%;
