@@ -133,13 +133,13 @@ h4 {
   .dices {
     width: 40%;
     margin-bottom: 10%;
-    transition: opacity 2s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
     opacity: 1;
   }
 
   .dices.animate {
     opacity: 0;
-    transition: opacity 2s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
   }
 
 
