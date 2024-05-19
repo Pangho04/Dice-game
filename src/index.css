@@ -98,3 +98,31 @@ h3 {
 .score, .history {
   font-weight: bold;
 }
+
+@media (max-width: 576px) {
+  .menus {
+  width: 70%;
+  font-size: 130%;
+  }
+  
+  .logo {
+    width: 20%;
+  }
+
+  h3 {
+    font-size: 140%;
+  }
+
+  .card {
+    width: 40%;
+  }
+
+  .dices {
+    width: 40%;
+    margin-bottom: 10%;
+  }
+
+  p {
+    margin: 5%;
+  }
+}
