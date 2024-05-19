@@ -1,10 +1,9 @@
 export default function Menu({
-  playerDice,
   getDice,
-  handlePlayer1Dice,
+  handlePlayerDices,
   player,
   handlePlayer,
-  hadleplayerdice,
+  hadleplayerDice,
   handlePlayer1TurnScore,
   handlePlayer1TotalScore,
   handlePlayer2TurnScore,
@@ -21,14 +20,12 @@ export default function Menu({
 
   /**리셋 버튼 */
   function resetTurn () {
-    handlePlayer1Dice(null);
+    handlePlayerDices = null;
     handlePlayer('yellow');
     handlePlayer1TurnScore([]);
     handlePlayer1TotalScore(0);
     handlePlayer2TurnScore([]);
     handlePlayer2TotalScore(0);
-    getDice();
-
   }
 
 /**함수묶음(주사위 던지기, 사용자 변경, 눈 기록, 총점수) */
@@ -36,7 +33,7 @@ export default function Menu({
     getDice();
     turnPlayer();
     handlePlayerHistory();
-    hadleplayerdice();
+    hadleplayerDice();
   }
 
     return (

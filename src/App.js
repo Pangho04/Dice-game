@@ -2,10 +2,8 @@ import React, { useState, useEffect} from 'react';
 import './App.css';
 import Card from './Card';
 import Menu from './Menu';
-import userEvent from '@testing-library/user-event';
 
 export default function App() {
-  const [dice, setDice] = useState(null);
   const [playerTurn, setPlayerTurn] = useState('yellow');
   const [player1TurnScores,setPlayer1TurnScore] = useState([]);
   const [player1TotalScore, setPlayer1TotalScore] = useState(0);
@@ -16,27 +14,18 @@ export default function App() {
   let player2Dice;
   let dice1Img = `yellow0${player1TurnScores.slice(player1TurnScores.length - 1)}`;
   let dice2Img = `red0${player2TurnScores.slice(player2TurnScores.length - 1)}`;
-
-
-  /**왜 미리 rollDice를 한번 실행 시켜줘야 되는지 모르겠음 */
-  useEffect(() => {
-    rollDice();
-  },[]);
+  let newRoll = 0;
 
   /**주사위 난수 생성 */
   function rollDice () {
-    const newRoll = Math.floor(Math.random() * 6) + 1;
-
-    setDice(newRoll);
-
-    playerDice();
+    newRoll = Math.floor(Math.random() * 6) + 1;
   }
 
   function playerDice () {
       if (playerTurn === 'yellow') {
-        player1Dice = dice;
+        player1Dice = newRoll;
       } else if ( playerTurn === 'red') {
-        player2Dice = dice;
+        player2Dice = newRoll;
       }
     }
 
@@ -54,9 +43,9 @@ export default function App() {
 
   function setPlayerHistory () {
     if (playerTurn === 'yellow') {
-      setTotalScore(dice, player1TurnScores, setPlayer1TurnScore, setPlayer1TotalScore)
+      setTotalScore(newRoll, player1TurnScores, setPlayer1TurnScore, setPlayer1TotalScore)
     } else {
-      setTotalScore(dice, player2TurnScores, setPlayer2TurnScore, setPlayer2TotalScore)
+      setTotalScore(newRoll, player2TurnScores, setPlayer2TurnScore, setPlayer2TotalScore)
     }
   }
 
@@ -67,11 +56,10 @@ export default function App() {
         Dice game
       </h3>
       <Menu
-        playerDice={dice}
-        handlePlayer1Dice={setDice}
+        handlePlayerDices={newRoll}
         getDice={rollDice}
         player={playerTurn}
-        hadleplayerdice={playerDice}
+        hadleplayerDice={playerDice}
         handlePlayer={setPlayerTurn}
         handlePlayer1TurnScore={setPlayer1TurnScore}
         handlePlayer1TotalScore={setPlayer1TotalScore}
