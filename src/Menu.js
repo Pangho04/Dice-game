@@ -3,7 +3,6 @@ export default function Menu({
   handlePlayerDices,
   player,
   handlePlayer,
-  hadleplayerDice,
   handlePlayer1TurnScore,
   handlePlayer1TotalScore,
   handlePlayer2TurnScore,
@@ -33,7 +32,6 @@ export default function Menu({
     getDice();
     turnPlayer();
     handlePlayerHistory();
-    hadleplayerDice();
   }
 
     return (

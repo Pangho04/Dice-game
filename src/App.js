@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import Card from './Card';
 import Menu from './Menu';
@@ -10,8 +10,6 @@ export default function App() {
   const [player2TurnScores,setPlayer2TurnScore] = useState([]);
   const [player2TotalScore, setPlayer2TotalScore] = useState(0);
 
-  let player1Dice;
-  let player2Dice;
   let dice1Img = `yellow0${player1TurnScores.slice(player1TurnScores.length - 1)}`;
   let dice2Img = `red0${player2TurnScores.slice(player2TurnScores.length - 1)}`;
   let newRoll = 0;
@@ -20,14 +18,6 @@ export default function App() {
   function rollDice () {
     newRoll = Math.floor(Math.random() * 6) + 1;
   }
-
-  function playerDice () {
-      if (playerTurn === 'yellow') {
-        player1Dice = newRoll;
-      } else if ( playerTurn === 'red') {
-        player2Dice = newRoll;
-      }
-    }
 
   function setTotalScore (
     playerDice,
@@ -59,7 +49,6 @@ export default function App() {
         handlePlayerDices={newRoll}
         getDice={rollDice}
         player={playerTurn}
-        hadleplayerDice={playerDice}
         handlePlayer={setPlayerTurn}
         handlePlayer1TurnScore={setPlayer1TurnScore}
         handlePlayer1TotalScore={setPlayer1TotalScore}
